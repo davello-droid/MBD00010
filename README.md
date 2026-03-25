@@ -34,7 +34,6 @@ Proyecto_Logistica_Cencosud/
 ```
 ---
 ## 2) Objetivo del Proyecto
----
 El objetivo del proyecto es construir un modelo predictivo que permita
 estimar el comportamiento futuro de las importaciones de
 electrodomésticos en Chile, con el propósito de apoyar la planificación
@@ -64,9 +63,9 @@ Modelos a comparar:
 
 El mejor modelo sería seleccionado mediante validación cruzada y métricas
 de error.
+
 ---
 ## 3) Instalación (Windows / PowerShell)
----
 ```powershell
 # 1) Crear entorno virtual windows
 python -m venv .venv
@@ -82,7 +81,6 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 ---
 ## 4) Datasets (carpeta `data/`)
----
 ```text
 Ubicación de datos
 data/raw/
@@ -111,7 +109,6 @@ data/processed/
 ```
 ---
 ## 5) Flujo de trabajo
----
 1. Exploración de datos  
 2. Limpieza y filtrado por código HS  
 3. Agregación mensual  
@@ -122,7 +119,6 @@ data/processed/
 8. Interpretación para el cliente
 ---
 ## 6) Ejecución
----
 > Ejecutar notebooks en orden.
 
 ```powershell
@@ -135,7 +131,6 @@ data/processed/
 ---
 ---
 ## 7) Outputs esperados
----
 - Dataset limpio mensual  
 - Dataset final para modelado  
 - Métricas de modelos  
@@ -146,7 +141,6 @@ data/processed/
 
 ---
 ## 8) Metodología
----
 Se utiliza un enfoque de analítica de datos y series de tiempo
 
 - Preparación de datos
