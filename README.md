@@ -15,6 +15,7 @@ abiertos y modelos de series de tiempo y Machine Learning.
 
 ---
 ## 1) Estructura del Proyecto
+```text
 Proyecto_Logistica_Cencosud/
 |-- data/                          # Carpeta de datos
 |-- data/raw/                      # Carpeta de datos originales
@@ -30,9 +31,10 @@ Proyecto_Logistica_Cencosud/
 |-- report/                        # Carpeta de reportes
 |-- requirements.txt               # Dependencias del proyecto
 |-- README.md                      # Este archivo
-
+```
 ---
 ## 2) Objetivo del Proyecto
+---
 El objetivo del proyecto es construir un modelo predictivo que permita
 estimar el comportamiento futuro de las importaciones de
 electrodomésticos en Chile, con el propósito de apoyar la planificación
@@ -62,9 +64,9 @@ Modelos a comparar:
 
 El mejor modelo sería seleccionado mediante validación cruzada y métricas
 de error.
-
+---
 ## 3) Instalación (Windows / PowerShell)
-
+---
 ```powershell
 # 1) Crear entorno virtual windows
 python -m venv .venv
@@ -78,8 +80,9 @@ python -m pip install -r requirements.txt
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
-
+---
 ## 4) Datasets (carpeta `data/`)
+---
 ```text
 Ubicación de datos
 data/raw/
@@ -108,7 +111,7 @@ data/processed/
 ```
 ---
 ## 5) Flujo de trabajo
-
+---
 1. Exploración de datos  
 2. Limpieza y filtrado por código HS  
 3. Agregación mensual  
@@ -117,9 +120,9 @@ data/processed/
 6. Validación cruzada  
 7. Predicción a 6 meses  
 8. Interpretación para el cliente
-
+---
 ## 6) Ejecución
-
+---
 > Ejecutar notebooks en orden.
 
 ```powershell
@@ -130,9 +133,9 @@ data/processed/
 Archivos generados en
 data/processed/
 ---
-
+---
 ## 7) Outputs esperados
-
+---
 - Dataset limpio mensual  
 - Dataset final para modelado  
 - Métricas de modelos  
@@ -143,7 +146,7 @@ data/processed/
 
 ---
 ## 8) Metodología
-
+---
 Se utiliza un enfoque de analítica de datos y series de tiempo
 
 - Preparación de datos
