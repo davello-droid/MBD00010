@@ -1,5 +1,5 @@
 # MBD00010
-**Proyecto --- Predicción de Importaciones para Cencosud**
+**Proyecto - Predicción de Importaciones para Cencosud**
 
 Proyecto grupal -- Analítica del Transporte y Logística\
 Magíster en Business Analytics and Data Science -- UDP
@@ -25,7 +25,7 @@ notebooks/             	             # Contiene notebook del proyecto
   02_modelos.ipynb                   # notebook define modelo
   03_forecast_y_resultados.ipynb     # notebook pronostico final
 results/                             # Carpeta de resultados
-results/figures                      # Carpeta de resultados de figuras
+results/graficos                     # Carpeta de resultados de graficos
 requirements.txt                     # Dependencias del proyecto
 README.md                            # Este archivo
 ```
@@ -58,7 +58,7 @@ Modelos a comparar:
 -   XGBoost\
 -   LightGBM
 
-El mejor modelo sería seleccionado mediante validación cruzada y métricas
+El mejor modelo será seleccionado mediante validación cruzada y métricas
 de error.
 
 ---
