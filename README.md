@@ -21,7 +21,6 @@ Proyecto_Logistica_Cencosud/
 |-- data/raw/                      # Carpeta de datos originales
 |-- data/processed/                # Carpeta de datos procesados
 |-- notebooks/             	       # Contiene notebook del proyecto
-|-- main.py                        # Script principal para ejecutar todo
 |-- 01_preparacion_datos.ipynb     # notebook prepara datos
 |-- 02_modelos.ipynb               # notebook define modelo
 |-- 03_forecast_y_resultados.ipynb # notebook pronostico final
