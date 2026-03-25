@@ -17,17 +17,17 @@ abiertos y modelos de series de tiempo y Machine Learning.
 ## 1) Estructura del Proyecto
 ```text
 Proyecto_Logistica_Cencosud/
-data/                          # Carpeta de datos
-data/raw/                      # Carpeta de datos originales
-data/processed/                # Carpeta de datos procesados
-notebooks/             	       # Contiene notebook del proyecto
+data/                                # Carpeta de datos
+data/raw/                            # Carpeta de datos originales
+data/processed/                      # Carpeta de datos procesados
+notebooks/             	             # Contiene notebook del proyecto
   01_preparacion_datos.ipynb         # notebook prepara datos
   02_modelos.ipynb                   # notebook define modelo
   03_forecast_y_resultados.ipynb     # notebook pronostico final
-results/                       # Carpeta de resultados
-results/figures                # Carpeta de resultados de figuras
-requirements.txt               # Dependencias del proyecto
-README.md                      # Este archivo
+results/                             # Carpeta de resultados
+results/figures                      # Carpeta de resultados de figuras
+requirements.txt                     # Dependencias del proyecto
+README.md                            # Este archivo
 ```
 ---
 ## 2) Objetivo del Proyecto
