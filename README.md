@@ -15,12 +15,11 @@ abiertos y modelos de series de tiempo y Machine Learning.
 
 ---
 ## 1) Estructura del Proyecto
-```text
 Proyecto_Logistica_Cencosud/
 |-- data/                          # Carpeta de datos
 |-- data/raw/                      # Carpeta de datos originales
 |-- data/processed/                # Carpeta de datos procesados
-|-- notebooks/             	   # Contiene notebook del proyecto
+|-- notebooks/             	       # Contiene notebook del proyecto
 |-- main.py                        # Script principal para ejecutar todo
 |-- 01_preparacion_datos.ipynb     # notebook prepara datos
 |-- 02_modelos.ipynb               # notebook define modelo
@@ -29,14 +28,11 @@ Proyecto_Logistica_Cencosud/
 |-- results/figures                # Carpeta de resultados de figuras
 |-- results/metrics                # Carpeta de resultados de metricas
 |-- report/                        # Carpeta de reportes
-|-- requirements.txt            # Dependencias del proyecto
-|-- README.md                   # Este archivo
-
-```
+|-- requirements.txt               # Dependencias del proyecto
+|-- README.md                      # Este archivo
 
 ---
 ## 2) Objetivo del Proyecto
-```text
 El objetivo del proyecto es construir un modelo predictivo que permita
 estimar el comportamiento futuro de las importaciones de
 electrodomésticos en Chile, con el propósito de apoyar la planificación
@@ -66,7 +62,7 @@ Modelos a comparar:
 
 El mejor modelo sería seleccionado mediante validación cruzada y métricas
 de error.
-```
+
 ## 3) Instalación (Windows / PowerShell)
 
 ```powershell
