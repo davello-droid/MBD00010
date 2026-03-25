@@ -25,7 +25,7 @@ notebooks/             	             # Contiene notebook del proyecto
   02_modelos.ipynb                   # notebook define modelo
   03_forecast_y_resultados.ipynb     # notebook pronostico final
 results/                             # Carpeta de resultados
-results/graficos                     # Carpeta de resultados de graficos
+results/graphics                    # Carpeta de resultados de graficos
 requirements.txt                     # Dependencias del proyecto
 README.md                            # Este archivo
 ```
