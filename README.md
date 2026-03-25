@@ -1,13 +1,13 @@
 # MBD00010
-# Proyecto --- Predicci贸n de Importaciones para Cencosud
+# Proyecto --- Prediccióm de Importaciones para Cencosud
 
-Proyecto grupal -- Anal铆tica del Transporte y Log铆stica\
-Mag铆ster en Business Analytics and Data Science -- UDP
+Proyecto grupal -- Analítica del Transporte y Logística\
+Magíster en Business Analytics and Data Science -- UDP
 
 Este proyecto tiene como objetivo desarrollar un modelo predictivo para
-estimar las importaciones de electrodom茅sticos en Chile, utilizando
-datos de comercio exterior, con el fin de apoyar la planificaci贸n
-log铆stica de una empresa del sector retail (Cencosud).
+estimar las importaciones de electrodomésticos en Chile, utilizando
+datos de comercio exterior, con el fin de apoyar la planificación
+logística de una empresa del sector retail (Cencosud).
 
 El trabajo sigue un enfoque reproducible basado en notebooks, datos
 abiertos y modelos de series de tiempo y Machine Learning.
@@ -33,11 +33,11 @@ requirements.txt README.md
 
 El objetivo del proyecto es construir un modelo predictivo que permita
 estimar el comportamiento futuro de las importaciones de
-electrodom茅sticos en Chile, con el prop贸sito de apoyar la planificaci贸n
-log铆stica y de abastecimiento de una empresa del sector retail
+electrodomésticos en Chile, con el propósito de apoyar la planificación
+logística y de abastecimiento de una empresa del sector retail
 (Cencosud).
 
-Se analizar谩n las siguientes variables:
+Se analizarán las siguientes variables:
 
 -   Valor CIF\
 -   Peso total\
@@ -45,27 +45,27 @@ Se analizar谩n las siguientes variables:
 
 Productos considerados (c贸digos HS):
 
--   8418 鈫?Refrigeradores\
--   8450 鈫?Lavadoras\
--   8516 鈫?Microondas / hornos el茅ctricos\
--   8528 鈫?Televisores
+-   8418 Refrigeradores\
+-   8450 Lavadoras\
+-   8516 Microondas / hornos eléctricos\
+-   8528 Televisores
 
-Horizonte de predicci贸n:
+Horizonte de predicción:
 
 -   6 meses
 
 Modelos a comparar:
 
 -   ARIMA\
--   Regresi贸n lineal\
+-   Regresión lineal\
 -   Random Forest\
 -   XGBoost\
 -   LightGBM
 
-El mejor modelo ser谩 seleccionado mediante validaci贸n cruzada y m茅tricas
+El mejor modelo sería seleccionado mediante validación cruzada y métricas
 de error.
 
-## 3) Instalaci贸n
+## 3) Instalación
 
 Crear entorno virtual
 
@@ -87,7 +87,7 @@ python -m pip install -U pip
 
 ## 4) Datos utilizados
 
-Ubicaci贸n de datos
+Ubicación de datos
 
 data/raw/
 
@@ -96,7 +96,7 @@ Fuentes
 -   Servicio Nacional de Aduanas (importaciones)
 -   Datos entregados en el curso
 -   Datos abiertos de comercio exterior
--   Variables macroecon贸micas (opcional)
+-   Variables macroeconómicas (opcional)
 
 Columnas principales
 
@@ -106,7 +106,7 @@ Columnas principales
 -   peso
 -   cantidad
 
-Filtrado por c贸digos HS
+Filtrado por códigos HS
 
 -   8418
 -   8450
@@ -119,25 +119,25 @@ data/processed/
 
 ## 5) Flujo de trabajo
 
-1.  Exploraci贸n de datos\
-2.  Limpieza y filtrado por c贸digo HS\
-3.  Agregaci贸n mensual\
-4.  Construcci贸n de dataset temporal\
+1.  Exploración de datos\
+2.  Limpieza y filtrado por código HS\
+3.  Agregación mensual\
+4.  Construcción de dataset temporal\
 5.  Entrenamiento de modelos\
-6.  Validaci贸n cruzada\
-7.  Predicci贸n a 6 meses\
-8.  Interpretaci贸n para el cliente
+6.  Validación cruzada\
+7.  Predicción a 6 meses\
+8.  Interpretación para el cliente
 
 Etapas
 
--   Comprensi贸n del problema
--   Comprensi贸n de datos
--   Preparaci贸n
+-   Comprensión del problema
+-   Comprensión de datos
+-   Preparación
 -   Modelado
--   Evaluaci贸n
--   Interpretaci贸n
+-   Evaluación
+-   Interpretación
 
-## 6) Ejecuci贸n
+## 6) Ejecución
 
 Ejecutar notebooks en orden
 
@@ -153,13 +153,13 @@ data/processed/ results/
 
 Dataset limpio mensual\
 Dataset final para modelado\
-M茅tricas de modelos\
-Comparaci贸n de algoritmos\
-Predicci贸n a 6 meses\
-Gr谩ficos de series de tiempo\
+Métricas de modelos\
+Comparación de algoritmos\
+Predicción a 6 meses\
+Gráficos de series de tiempo\
 Resultados para informe
 
-Ubicaci贸n
+Ubicación
 
 results/
 
@@ -167,15 +167,15 @@ Subcarpetas
 
 results/figures/ results/metrics/ results/predictions/
 
-## 8) Metodolog铆a
+## 8) Metodología
 
-Se utiliza un enfoque de anal铆tica de datos y series de tiempo
+Se utiliza un enfoque de analítica de datos y series de tiempo
 
--   Preparaci贸n de datos
--   Agregaci贸n temporal
--   Modelos estad铆sticos
+-   Preparación de datos
+-   Agregación temporal
+-   Modelos estadísticos
 -   Machine Learning
--   Validaci贸n cruzada
+-   Validación cruzada
 -   Forecasting
 
 Modelos evaluados
@@ -186,7 +186,7 @@ Modelos evaluados
 -   XGBoost
 -   LightGBM
 
-El modelo final se selecciona seg煤n menor error.
+El modelo final se selecciona según menor error.
 
 ## 9) Cliente del proyecto
 
@@ -198,7 +198,7 @@ Necesidad
 
 Anticipar importaciones futuras para mejorar
 
--   log铆stica
+-   logística
 -   inventario
 -   transporte
 -   costos
@@ -206,7 +206,7 @@ Anticipar importaciones futuras para mejorar
 
 ## 10) Autores
 
-Proyecto grupal --- Anal铆tica del Transporte y Log铆stica
+Proyecto grupal --- Analítica del Transporte y Logística
 
 -   Felipe Valdivia
 -   Roberto Sepulveda
