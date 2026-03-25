@@ -112,7 +112,7 @@ data/processed/
 ```
 ---
 ## 5) Flujo de trabajo
-```text
+
 1. Exploración de datos  
 2. Limpieza y filtrado por código HS  
 3. Agregación mensual  
@@ -121,7 +121,6 @@ data/processed/
 6. Validación cruzada  
 7. Predicción a 6 meses  
 8. Interpretación para el cliente
-```
 
 ## 6) Ejecución
 
