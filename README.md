@@ -175,7 +175,7 @@ Anticipar importaciones futuras para mejorar
 - abastecimiento
 ---
 ## 10) Autoría
-**Grupo 2 – MBD0009**
+**MBD0010**
 - Felipe Valdivia
 - Daniel Avello
 - Roberto Sepúlveda
