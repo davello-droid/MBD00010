@@ -21,9 +21,7 @@ data/                                # Carpeta de datos
 data/raw/                            # Carpeta de datos originales
 data/processed/                      # Carpeta de datos procesados
 notebooks/             	             # Contiene notebook del proyecto
-  01_preparacion_datos.ipynb         # notebook prepara datos
-  02_modelos.ipynb                   # notebook define modelo
-  03_forecast_y_resultados.ipynb     # notebook pronostico final
+  proyecto_logistica_cencosud.ipynb  # notebook del proyecto
 results/                             # Carpeta de resultados
 results/graphics                    # Carpeta de resultados de graficos
 requirements.txt                     # Dependencias del proyecto
