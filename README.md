@@ -1,7 +1,7 @@
 # MBD00010
 **Proyecto - Predicción de Importaciones para Cencosud**
 
-Proyecto grupal -- Analítica del Transporte y Logística\
+Proyecto grupal -- Analítica del Transporte y Logística  
 Magíster en Business Analytics and Data Science -- UDP
 
 Este proyecto tiene como objetivo desarrollar un modelo predictivo para
@@ -12,22 +12,26 @@ logística de una empresa del sector retail (Cencosud).
 El trabajo sigue un enfoque reproducible basado en notebooks, datos
 abiertos y modelos de series de tiempo y Machine Learning.
 
-
 ---
+
 ## 1) Estructura del Proyecto
+
 ```text
-Proyecto_Logistica_Cencosud/
-data/                                    # Carpeta de datos
-data/raw/                                # Carpeta de datos originales
-data/processed/                          # Carpeta de datos procesados
-notebooks/             	                 # Contiene notebook del proyecto
-  01_preparacion_datos.ipynb             # notebook de preparacion de datos de aduana
-  02_proyecto_logistica_cencosud_.ipynb  # notebook del proyecto
-results/                                 # Carpeta de resultados
-results/graphics                         # Carpeta de resultados de graficos
-requirements.txt                         # Dependencias del proyecto
-README.md                                # Este archivo
-```
+MBD00010/
+│
+├── data/                         # Carpeta de datos (enlace a Google Drive en ejecución)
+│   ├── raw/aduanas/              # Datos originales (NO incluidos en el repo)
+│   └── processed/                # Datos procesados generados por el proyecto
+│
+├── notebooks/
+│   ├── 01_preparacion_datos.ipynb
+│   └── 02_proyecto_logistica_cencosud_.ipynb
+│
+├── results/                      # Resultados del modelo
+│   └── graphics/                 # Gráficos generados
+│
+├── requirements.txt              # Dependencias del proyecto
+└── README.md                     # Documentación
 ---
 ## 2) Objetivo del Proyecto
 El objetivo del proyecto es construir un modelo predictivo que permita
