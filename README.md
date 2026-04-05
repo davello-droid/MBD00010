@@ -32,6 +32,7 @@ MBD00010/
 │
 ├── requirements.txt              # Dependencias del proyecto
 └── README.md                     # Documentación
+```
 ---
 ## 2) Objetivo del Proyecto
 El objetivo del proyecto es construir un modelo predictivo que permita
