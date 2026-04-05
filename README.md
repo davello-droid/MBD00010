@@ -118,8 +118,7 @@ data/processed/
 
 ```powershell
 01_preparacion_datos.ipynb
-02_modelos.ipynb
-03_forecast_y_resultados.ipynb
+02_proyecto_logistica_cencosud_.ipynb
 ```
 Archivos generados en
 data/processed/
