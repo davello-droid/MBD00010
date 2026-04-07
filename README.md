@@ -21,6 +21,25 @@ Cencosud constituye un caso de uso realista y defendible para este tipo de anál
 ## 3. Problema de negocio
 
 ¿Cómo evolucionarán en los próximos meses las importaciones asociadas a determinadas categorías de productos electrodomésticos y electrónicos relevantes para una empresa del retail como Cencosud, y qué enfoque de modelamiento ofrece una mejor capacidad predictiva para apoyar decisiones logísticas?
+
+## 4. Objetivo general
+
+Desarrollar un pipeline analítico y predictivo que permita estimar la evolución mensual de importaciones de categorías HS4 seleccionadas, integrando microdatos del Servicio Nacional de Aduanas con variables externas del Banco Central de Chile.
+
+## 5. Objetivos específicos
+
+1. Preparar y estandarizar los datos de importaciones relevantes para el análisis.
+2. Identificar y filtrar categorías HS4 de interés para productos electrodomésticos y electrónicos.
+3. Construir series temporales mensuales consolidadas y segmentadas por categoría.
+4. Incorporar variables macroeconómicas externas para enriquecer el análisis.
+5. Desarrollar un análisis exploratorio que permita comprender patrones, variabilidad y posibles anomalías.
+6. Comparar distintos modelos predictivos sobre las variables objetivo.
+7. Generar pronósticos y visualizaciones útiles para la interpretación ejecutiva de resultados.
+
+## 6. Alcance del proyecto
+
+El proyecto se enfoca en el análisis de importaciones observadas en datos públicos, agregadas a frecuencia mensual, y en su modelamiento predictivo sobre variables seleccionadas. No busca reconstruir órdenes de compra internas ni representar de forma directa la demanda comercial o los procesos internos de abastecimiento de la empresa. En consecuencia, los resultados deben interpretarse como una señal analítica de apoyo a la toma de decisiones, y no como una proyección exacta de compras futuras.
+
 ---
 
 ## 99) Estructura del Proyecto
