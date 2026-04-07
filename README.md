@@ -12,9 +12,18 @@ Desde una perspectiva de negocio, el proyecto busca aportar una señal útil par
 
 El enfoque metodológico combina rigurosidad técnica y aplicabilidad práctica. Se evalúan distintos modelos sobre variables objetivo como valor CIF, peso y cantidad importada, utilizando métricas de error y ajuste para determinar el mejor desempeño por variable. En este contexto, el proyecto no pretende ofrecer una predicción exacta del comportamiento futuro de las compras de la empresa, sino una aproximación analítica defendible y útil como apoyo a la gestión.
 
+## 2. Contexto y justificación
+
+En empresas del retail con dependencia relevante de importaciones, la anticipación de flujos de ingreso de productos representa un insumo estratégico para la gestión logística. Contar con una proyección razonable del comportamiento futuro de las importaciones permite fortalecer decisiones relacionadas con abastecimiento, uso de capacidad, control de inventarios y priorización operativa.
+
+Cencosud constituye un caso de uso realista y defendible para este tipo de análisis, dada su exposición al comercio exterior en múltiples líneas de productos. En ese contexto, este proyecto propone transformar datos públicos y heterogéneos en una herramienta analítica con valor aplicado, orientada a responder una necesidad concreta de negocio mediante técnicas de ciencia de datos y modelamiento predictivo.
+
+## 3. Problema de negocio
+
+¿Cómo evolucionarán en los próximos meses las importaciones asociadas a determinadas categorías de productos electrodomésticos y electrónicos relevantes para una empresa del retail como Cencosud, y qué enfoque de modelamiento ofrece una mejor capacidad predictiva para apoyar decisiones logísticas?
 ---
 
-## 1) Estructura del Proyecto
+## 99) Estructura del Proyecto
 
 ```text
 MBD00010/
