@@ -49,8 +49,8 @@ MBD00010/
 │
 ├── data/                         # Carpeta de datos (enlace a Google Drive en ejecución)
 │   ├── raw
-│        ├── aduanas              # Datos originales (NO incluidos en el repo)              
-│        └── bcch   
+│        ├── aduanas/             # Datos originales (NO incluidos en el repo)              
+│        └── bcch/   
 │   └── processed/                # Datos procesados generados por el proyecto
 │
 ├── notebooks/
@@ -58,13 +58,13 @@ MBD00010/
 │   └── 02_proyecto_logistica_cencosud_.ipynb
 │
 ├── results/                      # Resultados del modelo
-│   └── graphics/                 # Gráficos generados
-│
+│    ├── graphics/                # Gráficos generados
+│    └── tables/                  # Tablas de resultados
 ├── requirements.txt              # Dependencias del proyecto
 └── README.md                     # Documentación
 ```
 ---
-## 2) Objetivo del Proyecto
+## 8) Objetivo del Proyecto
 El objetivo del proyecto es construir un modelo predictivo que permita
 estimar el comportamiento futuro de las importaciones de
 electrodomésticos en Chile, con el propósito de apoyar la planificación
@@ -90,19 +90,32 @@ Modelos a comparar:
 -   Regresión lineal\
 -   Random Forest\
 -   XGBoost\
--   LightGBM
+-   LightGBM\
+-   SARIMAX\
+-   Exponential Smoothing\
 
-El mejor modelo será seleccionado mediante validación cruzada y métricas
-de error.
+La selección final del mejor modelo por variable se realiza automáticamente a partir de las métricas obtenidas en la ejecución del notebook.
+
+## 9. Resultados esperados
+
+Se espera que el proyecto permita:
+
+- construir una base analítica limpia y trazable;
+- identificar patrones relevantes en la evolución mensual de las importaciones;
+- comparar el desempeño de distintos enfoques de modelamiento;
+- generar un forecast orientativo para variables críticas;
+- producir visualizaciones y tablas útiles para interpretación ejecutiva.
+
+En términos metodológicos, se espera además evidenciar que el desempeño predictivo puede variar entre variables y que la incorporación de variables exógenas puede aportar valor en ciertos casos, aunque no necesariamente de forma homogénea.
 
 ---
-## 3) Instalación
+## 10) Instalación
 ### Google Colab (recomendado)
 
 Este proyecto está preparado para ejecutarse en Google Colab, utilizando Google Drive para almacenar los datos.
 
 ---
-## 4) Datos
+## 11) Datos
 ### Ubicación exacta de los datos
 
 Los datos originales no se incluyen en este repositorio debido a su tamaño.
