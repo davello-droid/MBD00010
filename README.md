@@ -47,11 +47,14 @@ El proyecto se enfoca en el análisis de importaciones observadas en datos públ
 ```text
 MBD00010/
 │
-├── data/                         # Carpeta de datos (enlace a Google Drive en ejecución)
-│   ├── raw
-│        ├── aduanas/             # Datos originales (NO incluidos en el repo)              
-│        └── bcch/   
-│   └── processed/                # Datos procesados generados por el proyecto
+├── data/
+│   ├── aduanas/
+│   │   └── aduanas_procesadas.zip       # Datos procesados de Aduanas incluidos en el repo
+│   └── bcch/                            # Datos de variables exógenas del Banco Central de Chile
+│       ├── bcch_dolar_observado.csv
+│       ├── bcch_ipc_mensual.csv
+│       └── bcch_precio_cobre.csv
+│
 │
 ├── notebooks/
 │   ├── 01_preparacion_datos.ipynb
@@ -110,148 +113,154 @@ En términos metodológicos, se espera además evidenciar que el desempeño pred
 
 ---
 ## 10) Instalación
-### Google Colab (recomendado)
+### Google Colab
 
-Este proyecto está preparado para ejecutarse en Google Colab, utilizando Google Drive para almacenar los datos.
+Este proyecto está preparado para ejecutarse en Google Colab.
 
 ---
 ## 11) Datos
-### Ubicación exacta de los datos
+### Datos de Aduanas
 
 Los datos originales no se incluyen en este repositorio debido a su tamaño.
 
-Para ejecutar correctamente el proyecto en Google Colab, la carpeta de datos debe estar ubicada exactamente en:
+El flujo de preparación es el siguiente:
+
+1. Los archivos originales de Aduanas fueron almacenados externamente.
+2. El notebook `01_preparacion_datos.ipynb` descarga esos archivos mediante `gdown`.
+3. Los datos se procesan mediante lectura por bloques (chunking).
+4. Se generan dos archivos:
+   - `importaciones_hs_filtrado_raw.csv`
+   - `importaciones_hs_filtrado_estandarizado.csv`
+5. Ambos archivos se comprimen en:
+   - `aduanas_procesadas.zip`
+
+Para ejecutar el proyecto en el repositorio, el archivo debe estar ubicado en:
 
 ```text
-/content/drive/MyDrive/Mod10/proyecto/data
+/content/MBD00010/data/aduanas/aduanas_procesadas.zip
 ```
+
+### Variables exógenas (BCCH)
+
+El proyecto incorpora variables macroeconómicas del Banco Central de Chile como variables exógenas del modelo.
+
+Estas variables se encuentran en:
+
+```text
+/content/MBD00010/data/bcch/
+```
+
+Archivos considerados:
+- `bcch_dolar_observado.csv`
+- `bcch_ipc_mensual.csv`
+- `bcch_precio_cobre.csv`
+
+Estos archivos sí forman parte del repositorio y son cargados directamente por el notebook de modelamiento.
 
 ### Estructura exacta requerida
 
 ```text
-/content/drive/MyDrive/Mod10/proyecto/data/
-├── raw/
-│   └── aduanas/
-│       └── Txt_Originales/              # Archivos originales de Aduanas
-└── processed/
-    ├── importaciones_hs_filtrado_raw.csv
-    └── importaciones_hs_filtrado_estandarizado.csv
+/content/MBD00010/data/
+├── aduanas/
+│   └── aduanas_procesadas.zip
+└── bcch/
+    ├── bcch_dolar_observado.csv
+    ├── bcch_ipc_mensual.csv
+    └── bcch_precio_cobre.csv
 ```
 
 ### Fuentes
 
-- Servicio Nacional de Aduanas  
-- Datos entregados en el curso  
-- Datos abiertos de comercio exterior  
-- Variables macroeconómicas (opcional)
+- Servicio Nacional de Aduanas
+- Datos entregados en el curso
+- Datos abiertos de comercio exterior
+- Banco Central de Chile
 
 ### Variables principales
 
-- fecha  
-- codigo_arancel  
-- valor_cif  
-- peso  
-- cantidad  
+- fecha
+- codigo_arancel
+- valor_cif
+- peso
+- cantidad
 
 ### Filtrado por códigos HS
 
-- 8418  
-- 8450  
-- 8516  
-- 8528  
+- 8418
+- 8450
+- 8516
+- 8528
 
 ---
-## 5) Ejecución en Google Colab
+## 12) Ejecución en Google Colab
 
-### Paso 1: Montar Google Drive
+### Paso 1: Abrir el notebook principal
 
-```python
-from google.colab import drive
-drive.mount("/content/drive")
+```text
+notebooks/02_proyecto_logistica_cencosud.ipynb
 ```
 
-### Paso 2: Clonar el repositorio
+### Paso 2: Ejecutar todas las celdas
 
-```python
-!git clone https://github.com/davello-droid/MBD00010.git
-%cd /content/MBD00010
-```
+El notebook principal:
+- clona el repositorio desde GitHub;
+- instala dependencias;
+- descomprime `aduanas_procesadas.zip`;
+- carga los archivos de Aduanas y BCCH;
+- ejecuta el pipeline de análisis y modelamiento.
 
-### Paso 3: Enlazar la carpeta de datos desde Google Drive
-
-```python
-import os
-import shutil
-
-if os.path.islink("/content/MBD00010/data") or os.path.exists("/content/MBD00010/data"):
-    try:
-        if os.path.islink("/content/MBD00010/data"):
-            os.unlink("/content/MBD00010/data")
-        else:
-            shutil.rmtree("/content/MBD00010/data")
-    except Exception:
-        pass
-
-os.symlink(
-    "/content/drive/MyDrive/Mod10/proyecto/data",
-    "/content/MBD00010/data"
-)
-```
-
-### Paso 4: Instalar dependencias
-
-```python
-!pip install -r requirements.txt
-```
-
-### Paso 5: Ejecutar notebooks en orden
+### Paso 3: Ejecución opcional del notebook de preparación
 
 ```text
 notebooks/01_preparacion_datos.ipynb
-notebooks/02_proyecto_logistica_cencosud_.ipynb
 ```
 
----
-## 6) Validación rápida de rutas en Colab
+Este notebook permite reconstruir el dataset procesado de Aduanas a partir de los archivos originales.
 
-Antes de ejecutar los notebooks, se recomienda validar que la estructura esté disponible:
+---
+## 13) Validación rápida de rutas en Colab
+
+Antes de ejecutar el notebook de modelamiento, se recomienda validar que la estructura esté disponible:
 
 ```python
 from pathlib import Path
 
-base = Path("/content/drive/MyDrive/Mod10/proyecto/data")
+base = Path("/content/MBD00010/data")
 
 print("Existe data:", base.exists())
-print("Existe raw/aduanas:", (base / "raw" / "aduanas").exists())
-print("Existe processed:", (base / "processed").exists())
-print("Existe archivo raw filtrado:", (base / "processed" / "importaciones_hs_filtrado_raw.csv").exists())
-print("Existe archivo estandarizado:", (base / "processed" / "importaciones_hs_filtrado_estandarizado.csv").exists())
+print("Existe data/aduanas:", (base / "aduanas").exists())
+print("Existe aduanas_procesadas.zip:", (base / "aduanas" / "aduanas_procesadas.zip").exists())
+print("Existe data/bcch:", (base / "bcch").exists())
+print("Existe bcch_dolar_observado.csv:", (base / "bcch" / "bcch_dolar_observado.csv").exists())
+print("Existe bcch_ipc_mensual.csv:", (base / "bcch" / "bcch_ipc_mensual.csv").exists())
+print("Existe bcch_precio_cobre.csv:", (base / "bcch" / "bcch_precio_cobre.csv").exists())
 ```
 
 Si alguna de estas rutas no existe, el proyecto no funcionará correctamente.
 
 ---
-## 7) Flujo de trabajo
+## 14) Flujo de trabajo
 
-1. Exploración de datos  
-2. Limpieza y filtrado por código HS  
-3. Agregación mensual  
-4. Construcción de dataset temporal  
-5. Entrenamiento de modelos  
-6. Validación cruzada  
-7. Predicción a 6 meses  
-8. Interpretación para el cliente  
+1. Exploración de datos
+2. Limpieza y filtrado por código HS
+3. Agregación mensual
+4. Construcción de dataset temporal
+5. Integración de variables exógenas BCCH
+6. Entrenamiento de modelos
+7. Validación cruzada
+8. Predicción a 6 meses
+9. Interpretación para el cliente
 
 ---
-## 8) Outputs esperados
+## 15) Outputs esperados
 
-- Dataset limpio mensual  
-- Dataset final para modelado  
-- Métricas de modelos  
-- Comparación de algoritmos  
-- Predicción a 6 meses  
-- Gráficos de series de tiempo  
-- Resultados para informe  
+- Dataset limpio mensual
+- Dataset final para modelado
+- Métricas de modelos
+- Comparación de algoritmos
+- Predicción a 6 meses
+- Gráficos de series de tiempo
+- Resultados para informe
 
 Los resultados se almacenan en:
 
@@ -261,30 +270,32 @@ results/
 
 ---
 
-## 9) Metodología
+## 16) Metodología
 
 Se utiliza un enfoque de analítica de datos y series de tiempo:
 
-- Preparación de datos  
-- Agregación temporal  
-- Modelos estadísticos  
-- Machine Learning  
-- Validación cruzada  
-- Forecasting  
+- Preparación de datos
+- Agregación temporal
+- Modelos estadísticos
+- Machine Learning
+- Validación cruzada
+- Forecasting
 
 Modelos evaluados:
 
-- ARIMA  
-- Regresión lineal  
-- Random Forest  
-- XGBoost  
-- LightGBM  
+- ARIMA
+- Regresión lineal
+- Random Forest
+- XGBoost
+- LightGBM
+- SARIMAX
+- Exponential Smoothing
 
 El modelo final se selecciona según el menor error por validación cruzada.
 
 ---
 
-## 10) Cliente del proyecto
+## 17) Cliente del proyecto
 
 Cliente simulado: **Cencosud**
 
@@ -292,18 +303,18 @@ Necesidad:
 
 Anticipar importaciones futuras para mejorar:
 
-- logística  
-- inventario  
-- transporte  
-- costos  
-- abastecimiento  
+- logística
+- inventario
+- transporte
+- costos
+- abastecimiento
 
 ---
 
-## 11) Autoría
+## 18) Autoría
 
 **MBD0010**
 
-- Felipe Valdivia  
-- Daniel Avello  
-- Roberto Sepúlveda  
+- Felipe Valdivia
+- Daniel Avello
+- Roberto Sepúlveda
