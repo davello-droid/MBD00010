@@ -42,13 +42,15 @@ El proyecto se enfoca en el análisis de importaciones observadas en datos públ
 
 ---
 
-## 99) Estructura del Proyecto
+## 7) Estructura académica sugerida del proyecto
 
 ```text
 MBD00010/
 │
 ├── data/                         # Carpeta de datos (enlace a Google Drive en ejecución)
-│   ├── raw/aduanas/              # Datos originales (NO incluidos en el repo)
+│   ├── raw
+│        ├── aduanas              # Datos originales (NO incluidos en el repo)              
+│        └── bcch   
 │   └── processed/                # Datos procesados generados por el proyecto
 │
 ├── notebooks/
