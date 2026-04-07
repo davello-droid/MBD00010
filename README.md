@@ -3,7 +3,7 @@
 
 Proyecto grupal -- Analítica del Transporte y Logística  
 Magíster en Business Analytics and Data Science -- UDP
-
+---
 ## 1. Resumen ejecutivo
 
 El presente proyecto desarrolla una solución analítica orientada a estudiar y proyectar el comportamiento de las importaciones asociadas a categorías de productos electrodomésticos y electrónicos relevantes para una empresa del retail importador como Cencosud. La propuesta se construye a partir de microdatos del Servicio Nacional de Aduanas de Chile y se complementa con variables macroeconómicas del Banco Central de Chile, con el propósito de enriquecer la capacidad explicativa y predictiva del análisis.
@@ -11,21 +11,21 @@ El presente proyecto desarrolla una solución analítica orientada a estudiar y 
 Desde una perspectiva de negocio, el proyecto busca aportar una señal útil para la planificación logística, el monitoreo de abastecimiento y la toma de decisiones vinculadas a inventario, capacidad operativa y seguimiento de categorías sensibles. Para ello, se implementa un flujo de trabajo que considera la preparación de datos, la construcción de series temporales mensuales, la integración de variables externas, el análisis exploratorio, la comparación de modelos predictivos y la generación de pronósticos.
 
 El enfoque metodológico combina rigurosidad técnica y aplicabilidad práctica. Se evalúan distintos modelos sobre variables objetivo como valor CIF, peso y cantidad importada, utilizando métricas de error y ajuste para determinar el mejor desempeño por variable. En este contexto, el proyecto no pretende ofrecer una predicción exacta del comportamiento futuro de las compras de la empresa, sino una aproximación analítica defendible y útil como apoyo a la gestión.
-
+---
 ## 2. Contexto y justificación
 
 En empresas del retail con dependencia relevante de importaciones, la anticipación de flujos de ingreso de productos representa un insumo estratégico para la gestión logística. Contar con una proyección razonable del comportamiento futuro de las importaciones permite fortalecer decisiones relacionadas con abastecimiento, uso de capacidad, control de inventarios y priorización operativa.
 
 Cencosud constituye un caso de uso realista y defendible para este tipo de análisis, dada su exposición al comercio exterior en múltiples líneas de productos. En ese contexto, este proyecto propone transformar datos públicos y heterogéneos en una herramienta analítica con valor aplicado, orientada a responder una necesidad concreta de negocio mediante técnicas de ciencia de datos y modelamiento predictivo.
-
+---
 ## 3. Problema de negocio
 
 ¿Cómo evolucionarán en los próximos meses las importaciones asociadas a determinadas categorías de productos electrodomésticos y electrónicos relevantes para una empresa del retail como Cencosud, y qué enfoque de modelamiento ofrece una mejor capacidad predictiva para apoyar decisiones logísticas?
-
+---
 ## 4. Objetivo general
 
 Desarrollar un pipeline analítico y predictivo que permita estimar la evolución mensual de importaciones de categorías HS4 seleccionadas, integrando microdatos del Servicio Nacional de Aduanas con variables externas del Banco Central de Chile.
-
+---
 ## 5. Objetivos específicos
 
 1. Preparar y estandarizar los datos de importaciones relevantes para el análisis.
@@ -35,7 +35,7 @@ Desarrollar un pipeline analítico y predictivo que permita estimar la evolució
 5. Desarrollar un análisis exploratorio que permita comprender patrones, variabilidad y posibles anomalías.
 6. Comparar distintos modelos predictivos sobre las variables objetivo.
 7. Generar pronósticos y visualizaciones útiles para la interpretación ejecutiva de resultados.
-
+---
 ## 6. Alcance del proyecto
 
 El proyecto se enfoca en el análisis de importaciones observadas en datos públicos, agregadas a frecuencia mensual, y en su modelamiento predictivo sobre variables seleccionadas. No busca reconstruir órdenes de compra internas ni representar de forma directa la demanda comercial o los procesos internos de abastecimiento de la empresa. En consecuencia, los resultados deben interpretarse como una señal analítica de apoyo a la toma de decisiones, y no como una proyección exacta de compras futuras.
@@ -98,7 +98,7 @@ Modelos a comparar:
 -   Exponential Smoothing\
 
 La selección final del mejor modelo por variable se realiza automáticamente a partir de las métricas obtenidas en la ejecución del notebook.
-
+---
 ## 9. Resultados esperados
 
 Se espera que el proyecto permita:
