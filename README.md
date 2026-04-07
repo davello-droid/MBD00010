@@ -61,7 +61,6 @@ MBD00010/
 │       ├── bcch_ipc_mensual.csv
 │       └── bcch_precio_cobre.csv
 │
-│
 ├── notebooks/
 │   ├── 01_preparacion_datos.ipynb
 │   └── 02_proyecto_logistica_cencosud_.ipynb
