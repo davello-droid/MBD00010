@@ -3,6 +3,7 @@
 
 Proyecto grupal -- Analítica del Transporte y Logística  
 Magíster en Business Analytics and Data Science -- UDP
+
 ---
 ## 1. Resumen ejecutivo
 
