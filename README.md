@@ -4,13 +4,13 @@
 Proyecto grupal -- Analítica del Transporte y Logística  
 Magíster en Business Analytics and Data Science -- UDP
 
-Este proyecto tiene como objetivo desarrollar un modelo predictivo para
-estimar las importaciones de electrodomésticos en Chile, utilizando
-datos de comercio exterior, con el fin de apoyar la planificación
-logística de una empresa del sector retail (Cencosud).
+## 1. Resumen ejecutivo
 
-El trabajo sigue un enfoque reproducible basado en notebooks, datos
-abiertos y modelos de series de tiempo y Machine Learning.
+El presente proyecto desarrolla una solución analítica orientada a estudiar y proyectar el comportamiento de las importaciones asociadas a categorías de productos electrodomésticos y electrónicos relevantes para una empresa del retail importador como Cencosud. La propuesta se construye a partir de microdatos del Servicio Nacional de Aduanas de Chile y se complementa con variables macroeconómicas del Banco Central de Chile, con el propósito de enriquecer la capacidad explicativa y predictiva del análisis.
+
+Desde una perspectiva de negocio, el proyecto busca aportar una señal útil para la planificación logística, el monitoreo de abastecimiento y la toma de decisiones vinculadas a inventario, capacidad operativa y seguimiento de categorías sensibles. Para ello, se implementa un flujo de trabajo que considera la preparación de datos, la construcción de series temporales mensuales, la integración de variables externas, el análisis exploratorio, la comparación de modelos predictivos y la generación de pronósticos.
+
+El enfoque metodológico combina rigurosidad técnica y aplicabilidad práctica. Se evalúan distintos modelos sobre variables objetivo como valor CIF, peso y cantidad importada, utilizando métricas de error y ajuste para determinar el mejor desempeño por variable. En este contexto, el proyecto no pretende ofrecer una predicción exacta del comportamiento futuro de las compras de la empresa, sino una aproximación analítica defendible y útil como apoyo a la gestión.
 
 ---
 
